@@ -7,20 +7,53 @@ import heapq
 import queue
 input = sys.stdin.readline
 
+# (0 )(1  )  )(())
+# def lc1021():
+#     s = input()
+#     st = []
+#     ans = ''
+#     for c in s:
+#         if c == '(':
+#             st.append(c)
+#             if len(st) > 1:
+#                 ans += c
+#         else:
+#             st.pop()
+#             if st:
+#                 ans += c
+#     print(ans)
 
-def ksmall():
-    arr = list(map(int, input().split()))
-    k = int(input())
-    heap = [-x for x in arr[:k]]
-    heapq.heapify(heap)
+
+# 请在此输入您的代码
+a, b, c = map(int, input().split())
+def check(a, b, c):
+  if a > (b + c):
+    return 'l'
+  if b > (a + c):
+    return 'q'
+  if c > (a + b):
+    return 'b'
+  return -1
+
+print(check(a, b, c))
+
+
+
+
+
+# def ksmall():
+#     arr = list(map(int, input().split()))
+#     k = int(input())
+#     heap = [-x for x in arr[:k]]
+#     heapq.heapify(heap)
     
-    for x in arr[k:]:
-        if -x > heap[0]:
-            heapq.heappop(heap)
-            heapq.heappush(heap, -x)
-    print(*sorted([-x for x in heap]))
+#     for x in arr[k:]:
+#         if -x > heap[0]:
+#             heapq.heappop(heap)
+#             heapq.heappush(heap, -x)
+#     print(*sorted([-x for x in heap]))
 
-ksmall()
+
 
 
 # def _760():
