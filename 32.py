@@ -11,22 +11,29 @@ if 1:
     # import numpy as np
 
 
+def lc969():
+    nums = [1, 2, 3, 4, 5]
+    # 局部反转，比如反转下标 1 到 3 的部分
+    l, r = 1, 3
+    nums[l:r+1] = nums[l:r+1][::-1]
+    print(nums)
 
 
 
-def lq209():
-    s1 = list(input().strip())
-    s2 = list(input().strip()) # target
-    n = len(s1)
-    ans = 0
-    for i in range(n-1):
-        if s1[i] != s2[i]:
-            ans += 1
-            s1[i] = '*' if s1[i] == 'o' else 'o'
-            s1[i+1] = '*' if s1[i+1] == 'o' else 'o'
-    print(ans)
 
-lq209()
+# def lq209():
+#     s1 = list(input().strip())
+#     s2 = list(input().strip()) # target
+#     n = len(s1)
+#     ans = 0
+#     for i in range(n-1):
+#         if s1[i] != s2[i]:
+#             ans += 1
+#             s1[i] = '*' if s1[i] == 'o' else 'o'
+#             s1[i+1] = '*' if s1[i+1] == 'o' else 'o'
+#     print(ans)
+
+
 
 
 
