@@ -12,10 +12,7 @@ if 1:
 
 
 
-m = input()
-print(m)
-n = input()
-print(n)
+
 # def lq1621():
 #     n, m, k = mii()   #nums 至少有 k 个数要大于等于 m
 #     nums = lmi
